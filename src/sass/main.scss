@@ -1,0 +1,21 @@
+@import './base/variables';
+@import './base/reset';
+@import './base/base';
+
+
+// Estrutura
+@import './components/pokedex';
+@import './components/header';
+@import './components/footer';
+@import './components/menu';
+
+// Componentes
+@import './components/button_circle';
+@import './components/btns_socials';
+@import './components/btn_arrows';
+@import './components/btns_black';
+
+@import './components/insignias';
+@import './components/controls';
+@import './components/window';
+@import './components/cover';

@@ -1,0 +1,98 @@
+.insignias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: #05056e;
+    padding: 4px 2px;
+    border-radius: 8px;
+    position: relative;
+    .swiper-slide {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+     }
+     .swiper-pagination {    
+        top: 105%;
+        right: 0;
+        left: auto;
+        width: fit-content;
+        .swiper-pagination-bullet {
+            width: 50px;
+            height: 10px;
+            background-color: black;
+            border-radius: 8px;
+            &-active {
+                background-color: black;
+            } 
+        }
+     }
+    .item {
+        height: 50px;
+        width: 63px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-secondary;
+        margin: 2px;
+        cursor: pointer;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255,255,255,0.5);
+            width: 60px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: .5;
+            filter: blur(30px);
+            transform: translateX(-100px)  skewX(-15deg);
+          }
+          &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255,255,255,0.2);
+            width: 30px;
+            height: 100%;
+            left: 30px;
+            top: 0;
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100px) skewX(-15deg);
+          }
+          &:hover{
+            &:before{
+              transform: translateX(300px)  skewX(-15deg);  
+              opacity: 0.6;
+              transition: .7s;
+            }
+            &:after{
+              transform: translateX(300px) skewX(-15deg);  
+              opacity: 1;
+              transition: .7s;
+            }
+          }
+        img {
+            height: auto;
+            width: 30px;     
+        }
+        // &:before {
+        //     content: '';
+        //     height: 100%;
+        //     width: 100%;
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     background-color: #00aeff50;
+        // }
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+      
+}

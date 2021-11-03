@@ -1,0 +1,187 @@
+.window {
+    background-color: $white;
+    padding:  25px  30px  45px 30px;
+    position: relative;
+    color: $white;
+    &:after {
+        content: '';
+        width: 0; 
+        height: 0; 
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent; 
+        border-right:25px solid $color-primary; 
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: rotate(314deg);   
+        margin-bottom: -17px;
+        margin-left: -4px;
+    }
+
+    >.inner {
+        height: 230px;
+        width: 100%;
+        background-color: $dark;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+    .btncontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px;
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;    
+            max-width: 100px;
+        }
+        .btncircle {
+            margin: auto;
+        }
+    }
+    &-controls {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 63px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+        
+          
+    } 
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .swiper-pagination {    
+        top: 105%;
+        right: auto;
+        left: auto !important;
+        transform: none !important;
+        width: fit-content;
+        height: 10px;
+        .swiper-pagination-bullet {
+            width: 50px;
+            height: 10px;
+            background-color: black;
+            border-radius: 8px;
+            &-active {
+                background-color: black;
+            } 
+        }
+     }
+}
+
+.window_straight {
+     color: $white;
+     height: 125px;
+     width: 100%;
+     background-color: $dark;
+     border-radius: 8px;
+     margin-bottom: 25px;
+     overflow: hidden;
+     padding: 20px;
+     
+     .content {
+         height: 0;
+         transition: opacity 0.4s ease;
+         opacity: 0;
+         overflow: hidden;
+         &.active {
+            height: 100%;
+            opacity: 1;
+        }
+     }
+}
+
+.window_green {
+    height: 70px;
+    max-width: 120px;
+    background-color: $color-sextiary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: white;
+    border-radius: 4px;
+    border: 3px solid #061706; 
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 70px;
+        height: auto;
+        animation: pulse 0.5s infinite ease-in-out;
+        transition: transform 0.4s ease;
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.5);
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5;
+        filter: blur(30px);
+        transform: translateX(-100px)  skewX(-15deg);
+      }
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.2);
+        width: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100px) skewX(-15deg);
+      }
+      &:hover{
+        background: #338033;
+        cursor: pointer;
+        &:before{
+          transform: translateX(300px)  skewX(-15deg);  
+          opacity: 0.6;
+          transition: .7s;
+        }
+        &:after{
+          transform: translateX(300px) skewX(-15deg);  
+          opacity: 1;
+          transition: .7s;
+        }
+      }
+}   

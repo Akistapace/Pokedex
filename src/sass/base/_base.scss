@@ -1,0 +1,52 @@
+body {
+   height: 100vh;
+   width: 100%;
+   background-color: #F0E68C;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+@mixin pulseanimation {
+   animation: pulse 0.5s infinite ease;
+      @keyframes pulse {
+          0% {
+              opacity: 1;
+          }
+          50% {
+              opacity: 0.5;
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+}
+
+
+
+@mixin center($extend: true) {
+    @if $extend {
+        @extend %center;
+    } @else {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+%center {
+    @include center($extend: false);
+}
+
+
+
+.alertlights {
+   .btncircle {
+     &.-red {
+         @include pulseanimation();
+     }
+   }
+   .window_green {
+      @include pulseanimation();
+   }
+}

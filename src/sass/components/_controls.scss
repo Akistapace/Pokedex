@@ -1,0 +1,14 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    .btnmusic {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        background-color: $dark;
+        align-self: flex-start;
+        border: 1px solid black;
+    }
+}

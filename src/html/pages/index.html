@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
+</head>
+<body>
+    <article class="pokedex">
+        @@include('../components/header.html')	
+        <main class="inner">
+            @@include('../components/window.html')
+            @@include('../components/controls.html')
+        </main>
+    </article>
+    
+    <div class="pokedex-cover">
+        <header></header>
+        <main class="inner">
+            @@include('../components/window_straight.html')
+            @@include('../components/insignias.html')
+            @@include('../components/btns_socials.html')
+            @@include('../components/btns_bottom.html')
+        </main>
+
+       
+
+    </div> 
+    <script src="https://use.fontawesome.com/609ffafc18.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src=" https://unpkg.com/ityped@1.0.3"></script>
+    <script src="./dist/javascript/index.js"></script>
+</body>
+</html>

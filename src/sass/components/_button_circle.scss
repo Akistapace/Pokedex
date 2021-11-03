@@ -1,0 +1,33 @@
+.btncircle {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+    border: none;
+    color: transparent;
+    background-image: radial-gradient(circle at 115% 24% , transparent, transparent, #003056);
+    &.-small {
+        height: 15px;
+        width: 15px;
+    }
+    &.-big {
+        height: 60px;
+        width: 60px;
+        background-color: greenyellow;
+        border: 6px solid white;
+    }
+    &.-blue {
+        background-color: $color-secondary;
+    }
+    &.-yellow {
+        background-color: $color-tertiary;
+    }
+    &.-green {
+        background-color: $color-quartiary;
+    }
+    &.-red {
+        background-color: $color-quintiary; 
+        opacity: 0.5;
+    }
+}

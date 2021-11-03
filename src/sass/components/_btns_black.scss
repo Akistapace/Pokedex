@@ -1,0 +1,16 @@
+.btnsbottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .btn-black {
+        height: 52px;
+        width: 42%;
+        cursor: pointer;
+        background-color: $dark;
+        border: 1px solid $dark;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

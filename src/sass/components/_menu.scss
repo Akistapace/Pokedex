@@ -1,0 +1,44 @@
+.btnmenu {
+    display: inline-block;
+    cursor: pointer;
+    .menubar {
+        width: 35px;
+        height: 3px;
+        background-color: #333;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+}
+
+.menu {
+    position: absolute;
+    background-color: $color-secondary;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.4s ease;
+    z-index: 100;
+    &.active {
+        height: 100%;
+        opacity: 1;
+    }
+    legend,
+    li {
+        border-bottom: 1px solid  $white;;
+        text-align: center;
+        padding: 10px;
+        color: $white;
+        
+    }
+    li:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    legend {
+        padding: 20px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
