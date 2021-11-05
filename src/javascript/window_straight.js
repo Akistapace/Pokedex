@@ -2,10 +2,17 @@
 const windowStraight = {
     clickView: function() {
        let insignias = document.querySelectorAll('.insignias .item'),
-       content = document.querySelectorAll('.window_straight .content')
+           content = document.querySelectorAll('.window_straight .content'),
+           n = 0
       
        insignias.forEach(e => {
          e.addEventListener('click', ()=> {
+            n += 1
+
+            if (n > 0) {
+              document.querySelector('.window_straight ').classList.add('window-on')
+            }
+
             content.forEach(el => {
 
               el.classList.remove('active') 

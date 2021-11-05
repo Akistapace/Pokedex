@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
+
 </head>
 <body>
     <article class="pokedex">
@@ -38,23 +43,51 @@
         <div class="menu">
     <ul>
         <legend>Menu</legend>
-        <li class="item">Sobre</li>
-        <li class="item">Insígnias</li>
-        <li class="item">Projetos</li>
-        <li class="item">Contato</li>
+        <li class="item" data-menu="about">Sobre</li>
+        <li class="item" data-menu="badge">Insígnias</li>
+        <li class="item" data-menu="projects">Projetos</li>
+        <li class="item" data-menu="contact">Contato</li>
     </ul>
 </div>
 
         <div class="swiper mySwiper swiper-h">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">Horizontal Slide 1</div>
-              <div class="swiper-slide">Horizontal Slide 2</div>
-              <div class="swiper-slide">Horizontal Slide 3</div>
+              <div class="swiper-slide">
+                <div class="content justify-center">
+                  <h1 class="title">Bem vindo!</h1>
+                  <p class="text">
+                    Utilize as setas e os outros botões para interagir com a pokedéx.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content justify-center">
+                  <h1 class="title">Quem sou?</h1>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content text-left ">
+                  <div class="content-flex">
+                    <img src="src/assets/eu.jpeg" title="Eu - Fernando Oliveira Aquistapace" alt="Eu - Fernando Oliveira Aquistapace">
+                    <div>
+                      <p class="text">Um pokemon raro,</p>
+                      <p class="text">Desenvolvedor Frontend,</p>
+                    </div>
+                  </div>
+                  <p class="text">Alegre e pró-ativo, sempre a procura de aprimoramento pessoal e profissional.</p>
+                  <p class="text">Transformando idéias em realidade</p>
+
+                </div>
+              </div>
 
               <div class="swiper-slide">
                 <div class="swiper mySwiper2 swiper-v">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">Vertical Slide 1</div>
+                    <div class="swiper-slide">
+                      <div class="content justify-center">
+                        <h1 class="title">Portfólio</h1>
+                      </div>
+                    </div>
                     <div class="swiper-slide">Vertical Slide 2</div>
                     <div class="swiper-slide">Vertical Slide 3</div>
                   </div>
@@ -79,8 +112,8 @@
     <div class="swiper-pagination pagination"></div>
 </div>
             <div class="controls">
-    <button class="btnmusic">
-
+    <button class="btnOn">
+        <i class="fas fa-power-off"></i>
     </button>
     <div class="window_green">
     <img src="./src/assets/arrow-pontihada.png" alt="">
@@ -102,13 +135,49 @@
         <main class="inner">
             <div class="window_straight">
     <div class="content" data-index="0">
-      
-      Slide 1
+      <ul>
+        <li>
+          <b>Linguagem:</b> HTML - Hypertext Markup Language
+        </li>
+        <li>
+          <b>Habilidades:</b>
+          <ul>
+            <li>
+              - HTML semântico
+            </li>
+          </ul>
+        </li>
+      </ul> 
+     
     
     </div>
     <div class="content" data-index="1">
       
-      Slide 2
+      <ul>
+        <li>
+          <b>Linguagem:</b> CSS - Cascading Style Sheets
+        </li>
+        <li>
+          <b>Habilidades:</b>
+          <ul>
+            <li>
+              - Positions
+            </li>
+            <li>
+              - Flexbox
+            </li>
+            <li>
+              - Grid
+            </li>
+            <li>
+              - Responsividade
+            </li>
+            <li>
+              - Animações
+            </li>
+          </ul>
+        </li>
+      </ul> 
     
     </div>
     <div class="content" data-index="2">
@@ -212,27 +281,26 @@
 </div>
 
             <div class="btns_socials">
-    <button class="btn" type="btn">
+    <a href="https://github.com/Akistapace" target="_blank" class="btn" type="btn">
         <i class="fab fa-github"></i>
-    </button>
+    </a>
 
-    <button class="btn" type="btn">
+    <a href="https://www.linkedin.com/in/fernando-aquistapace-33a414165/" target="_blank"  class="btn" type="btn">
         <i class="fab fa-linkedin-in"></i>
-    </button>
+    </a>
 </div>
             <div class="btnsbottom">
     <button class="btn-black">
-
+        Projetos
     </button>
     <button class="btn-black">
 
     </button>
 </div>
         </main>
-
-       
-
     </div> 
+
+
     <script src="https://use.fontawesome.com/609ffafc18.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src=" https://unpkg.com/ityped@1.0.3"></script>

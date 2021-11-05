@@ -16,6 +16,18 @@
         width: 60px;
         background-color: greenyellow;
         border: 6px solid white;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #fff;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            filter: blur(4px);
+        }
     }
     &.-blue {
         background-color: $color-secondary;

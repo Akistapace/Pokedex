@@ -5,6 +5,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
+   font-family: $font1 !important;
 }
 @mixin pulseanimation {
    animation: pulse 0.5s infinite ease;
@@ -38,7 +39,13 @@ body {
     @include center($extend: false);
 }
 
-
+@mixin fade-transition($element) {
+	-webkit-transition: $element 0.15s ease-in-out;
+	-moz-transition: $element 0.15s ease-in-out;
+	-ms-transition: $element 0.15s ease-in-out;
+	-o-transition: $element 0.15s ease-in-out;
+	transition: $element 0.15s ease-in-out;
+}
 
 .alertlights {
    .btncircle {
@@ -50,3 +57,56 @@ body {
       @include pulseanimation();
    }
 }
+
+.lightining {
+    @include pulseanimation();
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+  .text-left {
+    text-align: left !important;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .align-center {
+    align-items: center !important;
+  }
+
+  .align-start {
+    align-items: flex-start !important;
+  }
+
+  .justify-center {
+    justify-content: center !important;
+  }
+
+  .justify-start {
+    justify-content: flex-start !important;
+  }
+  

@@ -11,6 +11,7 @@ const insignias = {
         });
         
     },
+
     init: function () {
         this.sliderGrid();
     }

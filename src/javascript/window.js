@@ -1,18 +1,47 @@
+let btnOn = document.querySelector('.btnOn')
+
+btnOn.addEventListener('click', ()=> {
+  document.querySelector('.window > .inner').classList.toggle('window-on')
+})
+
+
 var horizontal = new Swiper(".window .mySwiper", {
   spaceBetween: 50,
+  allowTouchMove: false,
   pagination: {
     el: ".window .pagination",
     clickable: true,
     dynamicBullets: true,
-    dynamicMainBullets: 1
+    dynamicMainBullets: 1,
+  },
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
   },
 });
 var vertical = new Swiper(".mySwiper2", {
   direction: "vertical",
   spaceBetween: 50,
+  allowTouchMove: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      translate: [0, "100%", 0],
+    },
   },
 });
 
@@ -126,3 +155,4 @@ controlUp.addEventListener('click', ()=> {
 controlDown.addEventListener('click', ()=> {
   vertical.slideNext(500)
 })
+

@@ -9,6 +9,8 @@
         cursor: pointer;
         background-color: $dark;
         border: 1px solid $dark;
+        color: #fff;
+        font-weight: 700;
         &:hover {
             opacity: 0.8;
         }
