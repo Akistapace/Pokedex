@@ -6,6 +6,9 @@ body {
    align-items: center;
    justify-content: center;
    font-family: $font1 !important;
+   @include media('xs') {
+    padding: 10px;
+   }
 }
 @mixin pulseanimation {
    animation: pulse 0.5s infinite ease;
@@ -110,3 +113,46 @@ body {
     justify-content: flex-start !important;
   }
   
+
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float{
+    0%,100%{
+      box-shadow:0 5px 15px 0 rgba(0,0,0,.6);
+      transform:translatey(0)
+    }
+    50%{
+      box-shadow:0 25px 15px 0 rgba(0,0,0,.2);
+      transform:translatey(-10px)
+    }
+  }
+
+  .turnon {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: black;
+    color: white;
+    padding: 5px;
+    z-index: 1000;
+    @include media('xs') {
+      top: 5px;
+    }
+  }
+
+
+  body:not(.app-off) .turnon{
+    display: none;
+  }
+  .app-off {
+    .swiper-pagination,
+    .btnmenu,
+    .control,
+    .pokedex-cover {
+      pointer-events: none;
+    }
+  }

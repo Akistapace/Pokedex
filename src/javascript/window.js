@@ -2,6 +2,7 @@ let btnOn = document.querySelector('.btnOn')
 
 btnOn.addEventListener('click', ()=> {
   document.querySelector('.window > .inner').classList.toggle('window-on')
+  document.body.classList.toggle('app-off')
 })
 
 
@@ -45,8 +46,6 @@ var vertical = new Swiper(".mySwiper2", {
   },
 });
 
-
-
 let controlNext = document.querySelector('.btn.-right')
 let controlPrev = document.querySelector('.btn.-left')
 
@@ -58,14 +57,14 @@ horizontal.on('slideChange', function () {
   var arrow = document.querySelector('.window_green img')
 
   if (horizontal.isEnd) {
-      arrow.style.transform = "rotate(90deg)";
+      // arrow.style.transform = "rotate(90deg)";
 
-      setTimeout(() => {
-        controlNext.classList.add('ended')
-      }, 1000);
+      // setTimeout(() => {
+      //   controlNext.classList.add('ended')
+      // }, 1000);
 
-      controlUp.classList.remove('disabled')
-      controlDown.classList.remove('disabled')
+      // controlUp.classList.remove('disabled')
+      // controlDown.classList.remove('disabled')
       
   } else {
     arrow.style.transform = "rotate(0deg)";

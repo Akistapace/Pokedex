@@ -1,5 +1,6 @@
 .pokedex {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     background-color: $color-primary;
     border-radius: 8px;
     margin: auto;
@@ -28,6 +29,11 @@
             margin-top: -40px;
             border-radius: 4px;
 
+        }
+        @include media('xs') {
+            &:before {
+                display: none;
+            }
         }
     }
     header {

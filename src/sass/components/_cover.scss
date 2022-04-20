@@ -9,6 +9,9 @@
     align-items: stretch;
     justify-content: center;
     flex-direction: column;
+    @include media('xs') {
+        display: none;
+    }
 
     header {
         height: 100px;

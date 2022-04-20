@@ -22,9 +22,13 @@
       background-color: $dark;
       position: absolute;
       cursor: pointer;
+      outline: none;
+      &:focus {
+        outline: none;  
+      }
       &.disabled {
         pointer-events: none;
-        background-color: #dadada7e;
+        background-color: #0000007d;
       }
       &:hover {
         opacity: 0.8;
@@ -46,7 +50,7 @@
             margin-bottom: -15px;
           }
           &.disabled:before {
-            border-top: 15px solid #dadada7e;
+            border-top: 15px solid #0000007d;
           }
         }
         &.-left {
@@ -68,7 +72,7 @@
             margin-right: -15px;
           }
           &.disabled:before {
-            border-left: 15px solid #dadada7e;
+            border-left: 15px solid #0000007d;
           }
         }
         &.-right {
@@ -90,7 +94,7 @@
             margin-left: -15px;
           }
           &.disabled:before {
-            border-right: 15px solid #dadada7e;
+            border-right: 15px solid #0000007d;
           }
         }
         &.-bottom {
@@ -110,7 +114,7 @@
             margin-top: -15px;
           }
           &.disabled:before {
-            border-bottom: 15px solid #dadada7e;
+            border-bottom: 15px solid #0000007d;
           }
         }
     }
