@@ -1,4 +1,4 @@
-<h1 display="flex" align="center"><img class="emojidex-emoji" src="https://cdn.emojidex.com/emoji/seal/Pokeball.png" emoji-code="Pokeball" alt="Pokeball" height="30px" width="35px" />Pokedex - Portfolio Animated<img class="emojidex-emoji" src="https://cdn.emojidex.com/emoji/seal/Pokeball.png" emoji-code="Pokeball" alt="Pokeball" height="30px" width="35px" /></h1>
+# Pokedex - Portfolio Animated
 
 Mini portfolio based on the structure of a pokedex from the Pokemon anime
 
